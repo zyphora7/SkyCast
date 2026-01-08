@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+
+</head>
+  <body>
+    <div class="searchBar">
+        <div class="searchBarParentDiv">
+            <input type="text" class="inputFeild">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.rsZB5iKwX6totSXcV94swQHaHN?rs=1&pid=ImgDetMain&o=7&rm=3" alt="" width =20px class="searchIcon" onclick="fetchData()">
+        </div>
+    </div>
+    <div class="mainContentParentDiv d-flex ">
+        <div class="leftDiv">
+            <div class="currentTempDiv leftChild p-2 gap-3">
+                <h6 class="m-0" id="cityName">City Name</h6>
+                <h5 class="m-0" ><span id="cityTemp">0</span> &deg; C</h5>
+                <h5 class="m-0" id="cityDesc">Sky description</h5>
+                <hr class="line">
+                <div class="d-flex gap-2" >
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.VKxKFCiRm8a9pThHjF0WqQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="" width="25px" >
+                    <h6 id="date"></h6>
+                </div>
+                <div class="d-flex gap-2">
+                    <img src="https://cdn0.iconfinder.com/data/icons/iconico-3/1024/42.png" alt="" width="25px">
+                    <h6 id="time"></h6>
+                </div>
+            </div>
+            <div class="nextFiveDays d-flex flex-wrap leftChild gap-1 p-1">
+                <h6 id="NextFiveDaysTitle">Next five days</h6>
+                <div class="container">
+                <div class="foreCastRow d-flex flex-direction-column align-items-center justify-content-between gap-1">
+                    <div class="d-flex justify-content-center ">
+                        <img src="https://www.freeiconspng.com/uploads/cloud-icon-22.png" alt="" width="25px">
+                        <h5 class="m-0">0 &deg; C</h5>
+                        </div>
+                        <h6 class="m-0">Saturday</h6>
+                        <h6 class="m-0">4-1-26</h6>
+                </div>
+                <div class="foreCastRow d-flex flex-direction-column align-items-center justify-content-between gap-1">
+                    <div class="d-flex justify-content-center gap-1">
+                        <img src="https://www.freeiconspng.com/uploads/cloud-icon-22.png" alt="" width="25px">
+                        <h5 class="m-0">0 &deg; C</h5>
+                        </div>
+                        <h6 class="m-0">Sunday</h6>
+                        <h6 class="m-0">5-1-26</h6>
+                </div><div class="foreCastRow d-flex flex-direction-column align-items-center justify-content-between gap-1">
+                    <div class="d-flex justify-content-center gap-1">
+                        <img src="https://www.freeiconspng.com/uploads/cloud-icon-22.png" alt="" width="25px">
+                        <h5 class="m-0">0 &deg; C</h5>
+                        </div>
+                        <h6 class="m-0">Monday</h6>
+                        <h6 class="m-0">6-1-26</h6>
+                </div><div class="foreCastRow d-flex flex-direction-column align-items-center justify-content-between gap-1">
+                    <div class="d-flex justify-content-center gap-1">
+                        <img src="https://www.freeiconspng.com/uploads/cloud-icon-22.png" alt="" width="25px">
+                        <h5 class="m-0">0 &deg; C</h5>
+                        </div>
+                        <h6 class="m-0">Tueday</h6>
+                        <h6 class="m-0">7-1-26</h6>
+                </div><div class="foreCastRow d-flex flex-direction-column align-items-center justify-content-between gap-1">
+                    <div class="d-flex justify-content-center gap-1">
+                        <img src="https://www.freeiconspng.com/uploads/cloud-icon-22.png" alt="" width="25px">
+                        <h5 class="m-0">0 &deg; C</h5>
+                        </div>
+                        <h6 class="m-0">Wednesday</h6>
+                        <h6 class="m-0">8-1-26</h6>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="rightPanel">
+
+            <!-- Row One -->
+            <div class="rightRow rowOne">
+                <div class="rightDiv">🌊<br>Pressure<br><b>1025 hPa</b></div>
+                <div class="rightDiv">🌊<br>Pressure<br><b>1025 hPa</b></div>
+                <div class="rightDiv">🌊<br>Pressure<br><b>1025 hPa</b></div>
+                <div class="rightDiv">🌊<br>Pressure<br><b>1025 hPa</b></div>
+            </div>
+
+            <!-- Row Two -->
+            <div class="rightRow rowTwo">
+                <div class="rightDiv">
+                <h3>Air Quality Index (AQI)</h3>
+                <div class="aqi">
+                    <span>PM2.5<br><b>3.90</b></span>
+                    <span>SO2<br><b>3.90</b></span>
+                    <span>NO2<br><b>3.90</b></span>
+                    <span>O3<br><b>3.90</b></span>
+                </div>
+                </div>
+
+                <div class="rightDiv planet">
+                <h3>Sunrise & Sunset</h3>
+                <p id="sunrise">☀️ Sunrise : </p>
+                <p id="sunset">🌙 Sunset : </p>
+                </div>
+            </div>
+
+            <!-- Row Three -->
+            <div class="rightRow rowThree">
+                <div class="rightDiv" id="9am">9 AM<br>☁️<br><b>5°C</b></div>
+                <div class="rightDiv" id="12pm">12 PM<br>⛅<br><b>25°C</b></div>
+                <div class="rightDiv "id="3pm">3 PM<br>☀️<br><b>35°C</b></div>
+                <div class="rightDiv "id="6pm">6 PM<br>☁️<br><b>5°C</b></div>
+                <div class="rightDiv "id="9pm">9 PM<br>🌙<br><b>5°C</b></div>
+            </div>
+
+</div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        async function fetchData(){
+                function formatDateTime(ts) {
+                return new Date(ts * 1000).toLocaleString();
+                }
+
+
+              let cityName = document.getElementsByClassName('inputFeild')[0].value;
+              console.log('city  name:',cityName)
+              let requestData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=f029a1815a85cc11742ba214aa8435d6&units=metric`)
+              let formattedData = await requestData.json()
+              console.log("Formatted data:" ,formattedData)
+
+
+              let responseCityName = formattedData.name
+              let responseTemp = formattedData.main.temp
+              let skyDesc = formattedData.weather[0].description
+              $('#cityName')[0].innerText = responseCityName
+              $('#cityTemp')[0].innerText = responseTemp
+              $('#cityDesc')[0].innerText = skyDesc
+
+               
+              let formattedDate = formatDateTime(formattedData.dt)
+              let properDate = formattedDate.split(',')[0]
+              let properTime = formattedDate.split(',')[1]
+                   
+              $('#date')[0].innerHTML = properDate
+              $('#time')[0].innerHTML=properTime
+              let sunRiseTimeStamp = formattedData.sys.sunrise
+              let sunsetTimeStamp = formattedData.sys.sunset
+              let properSunrise = formatDateTime(sunRiseTimeStamp)
+              let properSunset = formatDateTime(sunsetTimeStamp)
+              $('#sunrise')[0].innerHTML = properSunrise
+              $('#sunset')[0].innerHTML = properSunset
+
+//hourly time & temp change
+               let lat = formattedData.coord.lat;
+              let lon = formattedData.coord.lon;
+                let requestData2 = await fetch(
+            `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=temperature_2m&daily=temperature_2m_max,temperature_2m_min&timezone=auto`
+            );
+            let formattedData2 = await requestData2.json();
+            console.log("Hourly + Daily:", formattedData2);
+
+            
+ 
+        }
+    </script>
+
+
+</body>
+</html>

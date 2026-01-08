@@ -1,0 +1,165 @@
+body{
+    background:url(https://tse1.mm.bing.net/th/id/OIP.eUne6TVFix2iR8i-R76-qgHaGe?rs=1&pid=ImgDetMain&o=7&rm=3);
+    background-size:cover;
+    background-attachment:fixed;
+    background-position:bottom;
+    font-family:"Comfortaa",sans-serif;
+    color:white;
+}
+
+.searchBar{
+    height:10vh;
+    background: black;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchBarParentDiv{
+    width:50%;
+    height:fit-content;
+    position:relative;
+
+}
+.inputFeild{
+    width:100%;
+    border-radius:25px;
+}
+.searchIcon{
+    position:absolute;
+    right:10px;
+    border-radius: 50%;
+    top:5px;
+    cursor:pointer;
+}
+.mainContentParentDiv{
+    height:90vh;
+    flex-direction:column;
+    flex-wrap:wrap;
+}
+.leftDiv{
+    width:30%;
+
+    height:100%;
+}
+
+.leftDic{
+    display:flex;
+    flex-direction: column;
+    
+}
+.nextFiveDays{
+  width:100%;
+  box-sizing:border-box;
+  
+}
+.container{
+  display:flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+  width:100%; 
+}
+.leftChild{
+    background:rgba(104, 96, 96, 0.4);
+    width:85%;
+    height:40vh;
+    margin:auto;
+    border-radius:20px;
+    margin-top: 20px;
+    backdrop-filter: blur(5px);
+  
+}
+.currentTempDiv h6{
+    font-size:larger;
+}
+#cityName{
+    font-size:xx-large;
+}
+#NextFiveDaysTitle{
+    font-size: x-large;
+}
+.rightPanel {
+  padding: 20px;
+  color: white;
+}
+
+/* Common row */
+.rightRow {
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Row One */
+.rowOne {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Row Two */
+.rowTwo {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+/* Row Three */
+.rowThree {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+}
+.planet{
+  display:flex;
+  flex-direction: column;
+  flex-shrink:0;
+}
+/* Card */
+.rightDiv {
+  background: rgba(104, 96, 96, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 15px;
+  text-align: center;
+  min-height: 90px;
+  width:100%;
+  height:27vh;
+}
+
+/* AQI styling */
+.aqi {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.aqi span {
+  font-size: 14px;
+}
+
+/* Hourly cards */
+.rowThree .rightDiv {
+  min-width: 90px;
+}
+
+@media only screen and(max-width:756px){
+    .rightDiv{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+    }
+    .leftDiv{
+        width:100%;
+        margin-top: 20px;
+        height:100%;
+        display:flex;
+        flex-direction:column;
+    }
+    .mainContentParentDiv{
+    height:90vh;
+    flex-direction:column;
+    }
+    .searchBar{
+        width:100%;
+    }
+    .rowOne{
+        flex-wrap:wrap;
+    }
+}
